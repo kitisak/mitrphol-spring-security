@@ -5,6 +5,7 @@
  */
 package co.th.linksinnovation.mitrphol.spring.security.controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +21,7 @@ public class HelloController {
         return "hello, world";
     }
     
+    @PreAuthorize("#oauth2.hasScope('global')")
     @RequestMapping("/api/secured")
     String getSecured(){
         return "hello, world secured";
