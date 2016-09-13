@@ -53,7 +53,7 @@ public class Oauth2Config {
                     .withClient("client")
                     .secret("secret")
                     .scopes("global")
-                    .authorizedGrantTypes("password");
+                    .authorizedGrantTypes("client_credentials");
         }
         
     }
